@@ -1,0 +1,164 @@
+@import url("variables.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 5px;
+    font-family: "Sans-Bold";
+}
+
+header {
+    padding: 25px;
+    background: var(--color-1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+header h2 {
+    color: white;
+}
+header p {
+    margin-top: 5px;
+    color: white;
+    opacity: 50%;
+}
+header input {
+    width: 100%;
+    padding: 12px 0 12px 20px;
+    font-size: 16px;
+    background: var(--color-2);
+    border: none;
+    border-radius: 50px;
+    margin: 20px 0 10px 0;
+    outline: none;
+}
+
+/* Main */
+main {
+    overflow-y: auto; /* Allow vertical scrolling */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Sombra alrededor */
+}
+
+.container {
+    max-width: 1200px; /* Set a max width for the container */
+    padding: 20px; /* Adjust padding for better layout */
+    margin: 40px auto 20px; /* Center the container and add top and bottom margins */
+    
+}
+
+.profile {
+    display: flex;
+    margin: 15px;
+}
+.profile_info h2 {
+    margin: 10px 0 18px 0;
+}
+.profile_info p {
+    color: black;
+    opacity: 75%;
+}
+
+main img {
+    width: 100px;
+}
+
+/* Media Queries */
+
+/* Medium and large screens */
+@media only screen and (max-width: 2560px) {
+    .container {
+        padding: 100px; /* Adjusted padding */
+        margin-top: -3%; /* Adjusted margin */
+    }
+
+    body {
+        overflow: hidden; /* Restrict overflow only if necessary */
+    }
+    
+}
+
+/* Very large screens */
+@media only screen and (min-width: 7800px) {
+    .container {
+        padding: 600px;
+        margin-top: -30%;
+    }
+
+    body {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    header h2 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    header input {
+        padding: 10px 0 10px 15px;
+        font-size: 14px;
+        margin: 15px 0 8px 0;
+    }
+
+    .container {
+        padding: 0; /* Remove padding for small screens */
+        margin-top: 0;
+        border-radius: 0; /* Remove rounded corners */
+        box-shadow: none; /* Remove shadow */
+    }
+
+    main {
+        overflow-y: auto; /* Enable vertical scrolling for main content */
+        max-height: calc(100vh - 150px); /* Limit main content height for better scrolling */
+        padding: 10px; /* Add padding for better layout */
+        border-radius: 0; /* Remove rounded corners */
+        box-shadow: none; /* Remove shadow */
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: row; /* Ensure items are in a row */
+        align-items: center; /* Vertically center items */
+        margin: 10px 0;
+        border-bottom: 1px solid #ccc; /* Add border bottom to separate profiles */
+        padding-bottom: 10px; /* Add padding bottom to separate profiles */
+    }
+
+    .profile img {
+        width: 80px; /* Smaller images */
+        margin-right: 10px; /* Space between image and info */
+        border-radius: 50%; /* Rounded image */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow to image */
+    }
+
+    .profile_info {
+        flex: 1; /* Expand profile info to take remaining space */
+    }
+
+    .profile_info h2 {
+        font-size: 18px;
+        margin: 8px 0 4px 0; /* Adjust margins */
+    }
+
+    .profile_info p {
+        font-size: 14px;
+        opacity: 0.75; /* Adjust opacity */
+    }
+
+    body {
+        overflow: auto; /* Allow scrolling */
+    }
+}

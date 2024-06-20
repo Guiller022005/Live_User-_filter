@@ -1,0 +1,9 @@
+:root {
+    --color-1 : #8841da; 
+    --color-2 : #2241cc;
+}
+
+@font-face {
+    font-family: "Sans-Bold";
+    src: url("../storage/fonts/IBMPlexSans-Bold.ttf");
+}
