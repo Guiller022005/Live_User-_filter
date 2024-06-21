@@ -16,8 +16,8 @@ export const getAllNameUser = async () => {
     }
 };
 
-export const getAllProductsName = async ({ search: text } = { search: "Zhadana" }) => {
-    const url = `https://6674179975872d0e0a950e53.mockapi.io/user/20`;
+export const getAllProductsName = async ({ search: text } = { search: "" }) => {
+    const url = `https://6674179975872d0e0a950e53.mockapi.io/user?search=${text}`;
     const options = {
         method: 'GET',
         headers: {

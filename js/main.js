@@ -45,14 +45,11 @@ let renderUsers = (users) => {
 };
 
 let searchUsers = async (e) => {
-    let params = new URLSearchParams(location.search);
-    input__search.value = params.get("search") || "";
-    let res = "";
-
+    const query = e.target.value; // Get the value from the input field
     try {
-        res = await getAllProductsName({ search: input__search.value });
-        console.log(res); // Do something with the search results
-        renderUsers(res);
+        const users = await getAllProductsName({ search: query });
+        console.log(users); // Do something with the search results
+        renderUsers(users);
     } catch (error) {
         console.error("Error in searchUsers function:", error);
     }
